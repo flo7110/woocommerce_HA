@@ -1,7 +1,7 @@
 {
   "domain": "woocommerce_integration",
   "name": "WooCommerce Integration",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "documentation": "https://github.com/flo7110/woocommerce_HA",
   "dependencies": [],
   "codeowners": ["@flo7110"],
