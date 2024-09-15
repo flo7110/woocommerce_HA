@@ -1,0 +1,11 @@
+{
+    "name": "WooCommerce Integration",
+    "content_in_root": false,
+    "domains": ["sensor"],
+    "country": "FR",
+    "zip_release": false,
+    "filename": "custom_components/woocommerce_integration",
+    "homeassistant": "2021.6.0",
+    "persistent_directory": false
+  }
+  
