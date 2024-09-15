@@ -1,10 +1,10 @@
 {
   "domain": "woocommerce_integration",
   "name": "WooCommerce Integration",
-  "version": "1.0.0",
-  "documentation": "https://github.com/ton-github-repository",
+  "version": "1.0.2",
+  "documentation": "https://github.com/flo7110/woocommerce_HA",
   "dependencies": [],
-  "codeowners": ["@ton-github-username"],
+  "codeowners": ["@flo7110"],
   "config_flow": true,
   "iot_class": "cloud_polling",
   "supported_platforms": ["sensor"],
