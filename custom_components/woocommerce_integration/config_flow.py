@@ -40,8 +40,8 @@ class WooCommerceOptionsFlowHandler(config_entries.OptionsFlow):
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema({
-                vol.Required("consumer_key", default=self.config_entry.data.get("consumer_key", ""), description="Consumer Key for WooCommerce API"): str,
-                vol.Required("consumer_secret", default=self.config_entry.data.get("consumer_secret", ""), description="Consumer Secret for WooCommerce API"): str,
-                vol.Required("url", default=self.config_entry.data.get("url", ""), description="URL of your WooCommerce store"): str,
+                vol.Required("consumer_key", default=self.config_entry.data.get("consumer_key"), description={"name": "Consumer Key"}): str,
+                vol.Required("consumer_secret", default=self.config_entry.data.get("consumer_secret"), description={"name": "Consumer Secret"}): str,
+                vol.Required("url", default=self.config_entry.data.get("url"), description={"name": "WooCommerce URL"}): str,
             })
         )
