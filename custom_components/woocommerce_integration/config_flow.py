@@ -1,6 +1,5 @@
 import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.core import callback
 from .const import DOMAIN
 
 class WooCommerceConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -17,22 +16,17 @@ class WooCommerceConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # Validation des informations saisies
             return self.async_create_entry(title="WooCommerce", data=user_input)
 
-        # Ajouter des placeholders pour chaque champ
+        # Ajouter des placeholders directement dans la définition du formulaire
         data_schema = vol.Schema({
-            vol.Required("url", default=""): str,
-            vol.Required("consumer_key", default=""): str,
-            vol.Required("consumer_secret", default=""): str,
+            vol.Required("url", description="Entrez l'URL de votre site WooCommerce (ex. https://votresite.com)"): str,
+            vol.Required("consumer_key", description="Entrez votre Consumer Key WooCommerce"): str,
+            vol.Required("consumer_secret", description="Entrez votre Consumer Secret WooCommerce"): str,
         })
 
         return self.async_show_form(
             step_id="user",
             data_schema=data_schema,
-            errors=errors,
-            description_placeholders={
-                "url": "Entrez l'URL de votre site WooCommerce (ex. https://votresite.com)",
-                "consumer_key": "Entrez votre Consumer Key WooCommerce",
-                "consumer_secret": "Entrez votre Consumer Secret WooCommerce"
-            }
+            errors=errors
         )
 
     @staticmethod
