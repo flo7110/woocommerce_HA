@@ -8,5 +8,5 @@
   "config_flow": true,
   "iot_class": "cloud_polling",
   "supported_platforms": ["sensor"],
-  "icon": "https://img.icons8.com/?size=100&id=115298&format=png&color=000000"
+  "icon": "https://static-00.iconduck.com/assets.00/woocommerce-icon-2048x1219-98m7botz.png"
 }
